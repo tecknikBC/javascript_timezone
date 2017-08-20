@@ -1,0 +1,21 @@
+HTML
+
+<h4>Berlin</h4>
+<p id='berlin'></p>
+<br>
+<h4>Sydney</h4>
+<p id='SYD'></p>
+
+JavaScript
+
+<script> //place script whereever you want.
+var SYD1 = new Date().toLocaleString("en-AU", {timeZone: "Australia/Sydney", year:'numeric', month:'short', day:'numeric'});
+var SYD2 = new Date().toLocaleString("en-AU", {timeZone: "Australia/Sydney", hour12:false, hour:'numeric', minute:'numeric', timeZoneName:'short'});
+
+document.getElementById('SYD').innerHTML = SYD1 + '<br>' + SYD2;
+
+var berlin = new Date().toLocaleString("de-DE", {timeZone: "Europe/Berlin", year:'numeric', month:'short', day:'numeric'});
+var berlin2 = new Date().toLocaleString("de-DE", {timeZone: "Europe/Berlin", hour12:false, hour:'numeric', minute:'numeric'});
+
+document.getElementById('berlin').innerHTML = berlin + '<br>' + berlin2 + ' CEST';
+</script>
